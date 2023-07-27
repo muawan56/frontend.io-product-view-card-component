@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* || FONTS */
+  --FS-PARA: 14px;
+  --FF-PARA: "Montserrat", sans-serif;
+  --FF-HEADER: "Fraunces", serif;
+
+  /* || FONT WEIGHT */
+  --FW-HEADER: 700;
+  --FW-PARA: 500;
+
+  /* || COLORS */
+  --BTNCOLOR: hsl(158, 36%, 37%);
+  --BGCOLOR: hsl(30, 38%, 92%);
+  --CARD-COLOR: hsl(0, 0%, 100%);
+  --FCOLOR-HEADER: hsl(212, 21%, 14%);
+  --FCOLOR-ACTIVE: hsl(212, 21%, 14%);
+  --FCOLOR-PARA: hsl(228, 12%, 48%);
+}
+
+body {
+  align-items: center;
+  background-color: var(--BGCOLOR);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+img {
+  display: none;
+}
+
+main {
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: 500;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  width: 40%;
+}
+
+.left {
+  border-radius: 0.5rem 0 0.5rem 0;
+  display: flex;
+  height: auto;
+  width: 50%;
+}
+
+.right {
+  background-color: var(--CARD-COLOR);
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: var(--FF-PARA);
+  height: auto;
+  justify-content: space-between;
+  padding: 1.5rem;
+  width: 50%;
+}
+
+.right button {
+  align-items: bottom;
+}
+
+h1 {
+  font-family: var(--FF-HEADER);
+  font-weight: var(--FW-HEADER);
+  line-height: 0.9;
+}
+
+.right h5 {
+  font-weight: var(--FW-PARA);
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.left img {
+  display: inline;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+button {
+  display: block;
+  background-color: var(--BTNCOLOR);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--CARD-COLOR);
+}
+
+button:hover,
+button:focus {
+  background-color: var(--FCOLOR-ACTIVE);
+}
+
+div.para {
+  font-size: var(--FS-PARA);
+}
+
+.price {
+  color: var(--BTNCOLOR);
+  display: flex;
+  flex-flow: row wrap;
+  font-family: var(--FF-HEADER);
+  font-size: 1.6rem;
+  gap: 1rem;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+span.real-price {
+  align-self: center;
+  color: var(--FCOLOR-PARA);
+  font-family: var(--FF-PARA);
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    background-color: var(--BGCOLOR);
+    min-height: 100vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    min-width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  div.left {
+    display: none;
+  }
+
+  .mobile img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+
+  .right {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* padding: 1rem; */
+    flex-flow: column wrap;
+    border-radius: 0 0 0.8rem 0.8rem;
+    background-color: var(--CARD-COLOR);
+    gap: 14px;
+  }
+
+  h1 {
+    font-weight: var(--FW-PARA);
+  }
+}
